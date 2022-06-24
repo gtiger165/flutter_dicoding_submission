@@ -21,10 +21,16 @@ class HomeView extends GetView<HomeController> {
       backgroundColor: primaryBackground,
       body: SafeArea(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
           children: [
             SearchTextField(controller: controller),
-            AgentsItem(agent: controller.agent),
+            Flexible(
+              child: Obx(() => ListView.builder(
+                    itemCount: controller.agentsCount,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) =>
+                        AgentsItem(agent: controller.agents[index]),
+                  )),
+            ),
           ],
         ),
       ),
