@@ -50,9 +50,9 @@ class AgentsItem extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 12, 8, 8),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 8, 8),
                       child: Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Align(
                             alignment: AlignmentDirectional(-1, 0),
